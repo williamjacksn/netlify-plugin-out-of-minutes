@@ -4,7 +4,16 @@ Cancel a build early if you don&#x02bc;t have enough build minutes.
 
 ## Usage
 
-To install, add the following lines to your `netlify.toml` file:
+In your Netlify user settings, create a [personal access token][a]. Set a site or team environment variable with the
+name `NETLIFY_AUTH_TOKEN`. Set the value to the personal access token you created.
+
+[a]: https://app.netlify.com/user/applications#personal-access-tokens
+
+![Netlify environment variable][b]
+
+[b]: netlify-environment-variable.jpg
+
+Add the following lines to your `netlify.toml` file:
 
 ```toml
 [[plugins]]
