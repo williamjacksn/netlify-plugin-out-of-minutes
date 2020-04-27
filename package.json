@@ -1,7 +1,7 @@
 {
   "name": "netlify-plugin-out-of-minutes",
   "version": "1.0.0",
-  "description": "Netlify build plugin to block a build if you are out of build minutes.",
+  "description": "Netlify build plugin to cancel a build early if you donʼt have enough build minutes.",
   "main": "index.js",
   "keywords": [
     "netlify",
@@ -14,7 +14,7 @@
     "url": "https://github.com/williamjacksn/netlify-plugin-out-of-minutes"
   },
   "bugs": {
-    "url": "https://github.com/williamjackson/netlify-plugin-out-of-minutes"
+    "url": "https://github.com/williamjacksn/netlify-plugin-out-of-minutes/issues"
   },
   "dependencies": {
     "node-fetch": "~2.6"
