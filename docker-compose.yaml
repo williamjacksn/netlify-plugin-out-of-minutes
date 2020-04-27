@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  plugin-dev:
+    image: docker.pkg.github.com/williamjacksn/netlify-plugin-out-of-minutes/dev
+    build: .
+
+  npm-publish:
+    image: docker.pkg.github.com/williamjacksn/netlify-plugin-out-of-minutes/dev
+    entrypoint:
+      - /usr/local/bin/npm
+    command:
+      - publish

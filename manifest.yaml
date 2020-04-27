@@ -1,0 +1,7 @@
+name: netlify-plugin-out-of-minutes
+inputs:
+  - name: buildMinutesRequired
+    description: Fail the build if you do not have this many build minutes available.
+    default: 5
+  - name: overrideMinutesUsed
+    description: Override the number of build minutes that have been used for your team. Useful for testing or to force a build to either fail or succeed.

@@ -1,0 +1,22 @@
+{
+  "name": "netlify-plugin-out-of-minutes",
+  "version": "1.0.0",
+  "description": "Netlify build plugin to block a build if you are out of build minutes.",
+  "main": "index.js",
+  "keywords": [
+    "netlify",
+    "netlify-plugin"
+  ],
+  "author": "William Jackson <william@subtlecoolness.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamjacksn/netlify-plugin-out-of-minutes"
+  },
+  "bugs": {
+    "url": "https://github.com/williamjackson/netlify-plugin-out-of-minutes"
+  },
+  "dependencies": {
+    "node-fetch": "~2.6"
+  }
+}
