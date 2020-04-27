@@ -8,6 +8,4 @@ services:
   npm-publish:
     image: docker.pkg.github.com/williamjacksn/netlify-plugin-out-of-minutes/dev
     entrypoint:
-      - /usr/local/bin/npm
-    command:
-      - publish
+      - /npm-publish.sh
