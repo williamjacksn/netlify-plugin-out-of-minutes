@@ -6,16 +6,11 @@ async function log(message) {
 
 module.exports = {
     onInit: async ({constants, inputs, utils}) => {
-        let parsedBuildMinutesRequired, reprBuildMinutesRequired;
-        if ('buildMinutesRequired' in inputs) {
-            parsedBuildMinutesRequired = parseInt(inputs.buildMinutesRequired);
-            reprBuildMinutesRequired = JSON.stringify(inputs.buildMinutesRequired);
-        } else {
-            parsedBuildMinutesRequired = 5;
-        }
+        const parsedBuildMinutesRequired = parseInt(inputs.buildMinutesRequired);
+        const reprBuildMinutesRequired = JSON.stringify(inputs.buildMinutesRequired);
 
         if (Number.isNaN(parsedBuildMinutesRequired)) {
-            utils.build.failPlugin(`The input \`build_minutes_required\` must be an integer. You provided: ${reprBuildMinutesRequired}`);
+            utils.build.failPlugin(`The input \`buildMinutesRequired\` must be an integer. You provided: ${reprBuildMinutesRequired}`);
         }
 
         if (!('NETLIFY_AUTH_TOKEN' in process.env)) {
@@ -46,7 +41,7 @@ module.exports = {
             const parsedOverrideMinutesUsed = parseInt(inputs.overrideMinutesUsed);
             const reprOverrideMinutesUsed = JSON.stringify(inputs.overrideMinutesUsed);
             if (Number.isNaN(parsedOverrideMinutesUsed)) {
-                utils.build.failPlugin(`The input \`override_minutes_used\` must be an integer. You provided: ${reprOverrideMinutesUsed}`);
+                utils.build.failPlugin(`The input \`overrideMinutesUsed\` must be an integer. You provided: ${reprOverrideMinutesUsed}`);
             }
             await log(`Overriding actual minutes used with value from plugin input: ${parsedOverrideMinutesUsed}`);
             minutesUsed = parsedOverrideMinutesUsed;
