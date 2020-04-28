@@ -8,7 +8,6 @@ module.exports = {
     onInit: async ({constants, inputs, utils}) => {
         const parsedBuildMinutesRequired = parseInt(inputs.buildMinutesRequired);
         const reprBuildMinutesRequired = JSON.stringify(inputs.buildMinutesRequired);
-
         if (Number.isNaN(parsedBuildMinutesRequired)) {
             utils.build.failPlugin(`The input \`buildMinutesRequired\` must be an integer. You provided: ${reprBuildMinutesRequired}`);
         }
@@ -21,10 +20,10 @@ module.exports = {
         const authHeader = {Authorization: `Bearer ${process.env.NETLIFY_AUTH_TOKEN}`}
 
         if (!('SITE_ID' in constants)) {
-            await log('Could not determine the Site ID.');
+            await log('Could not determine the site ID.');
             await log('If you are running locally, use `netlify link` or set the NETLIFY_SITE_ID environment variable.')
             await log('This build will continue.')
-            utils.build.failPlugin('Could not determine the Site ID.');
+            utils.build.failPlugin('Could not determine the site ID.');
         }
 
         // Look up the account for this build and check how many build minutes are available
