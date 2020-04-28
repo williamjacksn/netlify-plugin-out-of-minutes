@@ -3,11 +3,18 @@
   "version": "1.0.2",
   "description": "Netlify build plugin to cancel a build early if you donʼt have enough build minutes.",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "manifest.yml"
+  ],
   "keywords": [
     "netlify",
     "netlify-plugin"
   ],
-  "author": "William Jackson <william@subtlecoolness.com>",
+  "author": {
+    "name": "William Jackson",
+    "email": "william@subtlecoolness.com"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
