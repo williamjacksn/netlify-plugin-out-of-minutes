@@ -9,6 +9,8 @@ name `NETLIFY_AUTH_TOKEN`. Set the value to the personal access token you create
 
 [a]: https://app.netlify.com/user/applications#personal-access-tokens
 
+:warning: Watch out! If you set this environment variable, any other build plugins you include in your project will also have access to your personal access token and will be able to interact with Netlify on your behalf.
+
 ![Netlify environment variable][b]
 
 [b]: netlify-environment-variable.jpg
