@@ -5,7 +5,7 @@ async function log(message) {
 }
 
 module.exports = {
-    onInit: async ({constants, inputs, utils}) => {
+    onPreBuild: async ({constants, inputs, utils}) => {
         const parsedBuildMinutesRequired = parseInt(inputs.buildMinutesRequired);
         const reprBuildMinutesRequired = JSON.stringify(inputs.buildMinutesRequired);
         if (Number.isNaN(parsedBuildMinutesRequired)) {
