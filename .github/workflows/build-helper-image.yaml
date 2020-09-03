@@ -1,0 +1,38 @@
+name: Build helper image
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - .npmrc
+      - Dockerfile
+  push:
+    branches:
+      - master
+    paths:
+      - .npmrc
+      - Dockerfile
+
+jobs:
+
+  build:
+    name: Build the helper image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2.3.2
+      - name: Build the image
+        uses: docker/build-push-action@v1.1.0
+        with:
+          repository: helper
+      - name: Tag and push the image
+        if: github.event_name == 'push'
+        uses: docker/build-push-action@v1.1.0
+        with:
+          repository: ${{ github.repository }}/netlify-plugin-out-of-minutes-helper
+          registry: docker.pkg.github.com
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+          tag_with_ref: true
+          add_git_labels: true
