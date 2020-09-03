@@ -1,14 +1,13 @@
-version: '3.7'
+version: '3.8'
 
 services:
-  plugin-dev:
-    image: docker.pkg.github.com/williamjacksn/netlify-plugin-out-of-minutes/dev
-    build: .
-
   npm-publish:
-    image: docker.pkg.github.com/williamjacksn/netlify-plugin-out-of-minutes/dev
+    image: docker.pkg.github.com/williamjacksn/netlify-plugin-out-of-minutes/netlify-plugin-out-of-minutes-helper
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
     entrypoint:
       - /usr/local/bin/npm
       - publish
     environment:
-      NPM_TOKEN: (set in docker-compose.override.yaml)
+      NPM_TOKEN:
