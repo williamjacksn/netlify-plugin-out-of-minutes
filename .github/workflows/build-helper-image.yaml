@@ -23,12 +23,12 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2.3.3
       - name: Build the image
-        uses: docker/build-push-action@v1.1.0
+        uses: docker/build-push-action@v2
         with:
           repository: helper
       - name: Tag and push the image
         if: github.event_name == 'push'
-        uses: docker/build-push-action@v1.1.0
+        uses: docker/build-push-action@v2
         with:
           repository: ${{ github.repository }}/netlify-plugin-out-of-minutes-helper
           registry: docker.pkg.github.com
