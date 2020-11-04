@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   npm-publish:
-    image: docker.pkg.github.com/williamjacksn/netlify-plugin-out-of-minutes/netlify-plugin-out-of-minutes-helper
+    image: ghcr.io/williamjacksn/netlify-plugin-out-of-minutes-helper
     working_dir: /workspace
     volumes:
       - ./:/workspace
