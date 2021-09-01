@@ -24,6 +24,6 @@
     "url": "https://github.com/williamjacksn/netlify-plugin-out-of-minutes/issues"
   },
   "dependencies": {
-    "node-fetch": "~2.6"
+    "node-fetch": "~3.0"
   }
 }
