@@ -1,3 +1,3 @@
-FROM node:16.15.1-alpine3.15
+FROM node:16.16.0-alpine3.15
 
 COPY .npmrc /root/
