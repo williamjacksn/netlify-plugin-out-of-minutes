@@ -1,3 +1,3 @@
-FROM node:18.17.0-alpine3.18
+FROM node:19.9.0-alpine3.18
 
 COPY .npmrc /root/
