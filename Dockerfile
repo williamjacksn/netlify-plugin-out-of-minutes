@@ -1,3 +1,3 @@
-FROM node:20
+FROM node:21
 
 COPY .npmrc /root/
