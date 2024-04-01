@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   npm-publish:
     image: ghcr.io/williamjacksn/netlify-plugin-out-of-minutes-helper
