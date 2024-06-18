@@ -51,3 +51,4 @@ jobs:
         with:
           cache-from: type=gha
           push: true
+          tags: ${{ env.image_name }}:latest
